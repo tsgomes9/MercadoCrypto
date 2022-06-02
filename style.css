@@ -1,0 +1,26 @@
+.box{
+  width: 35rem; 
+  padding: 3rem;
+  margin:  .8rem auto;
+  background-color: white
+}
+
+h1{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(236, 161, 0)
+}
+
+.consulta{
+  text-align: center;
+  align-items: center
+}
+
+.selectCoin{
+  margin-top: 2rem;
+  margin-bottom: 1rem
+}
+
+body{
+  background-color: rgb(237, 237, 237)
+}
