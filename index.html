@@ -23,90 +23,89 @@
     />
   </head>
 
-  <body class="container">
+  <body>
+    
+    <header class="nav-header">
+      <h1>Mercado Cripto</h1>
+    </header>
+    
     <form class="box">
-      <h1>Cripto Mercado</h1>
+      
+    <!-- CARDS -->
 
-      <!-- Seleção da moeda -->
-      <select
-        class="form-select form-select-lg mb-3 selectCoin"
-        aria-label=".form-select-lg example"
-        id="coin"
-      >
-        <option selected>Selecione uma criptomoeda</option>
-        <option value="btc">BTC : Bitcoin</option>
-        <option value="eth">ETH : Ethereum</option>
-        <option value="ltc">LTC : Litecoin</option>
-        <option value="axs">AXS : Axie Infinityn</option>
-      </select>
-
-      <!-- Valor de compra -->
-      <label for="high">Valor de compra</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input
-          type="text"
-          class="form-control"
-          id="buy"
-          placeholder="valor de compra atual"
-          readonly
-        />
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col description">
+        <div class="card h-100">
+          <img src="./img/BTC.svg" class="card-img-top imgCoin" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title titleCoin">BTC : Bitcoin</h5>
+            <div class="card-text">
+              <label for="btcBuy">Valor de compra:</label>
+              <p id="btcBuy" class="value"></p>
+              <label for="btcBuy">Valor de venda:</label>
+              <p id="btcSell" class="value"></p>
+              <label for="btcOpen">Abertura do Mercado</label>
+              <p id="btcOpen" class="value"></p>
+              <label for="btcHigh">Maior Preço</label>
+              <p id="btcHigh" class="value"></p>
+              <label for="btcLow">Menor Preço</label>
+              <p id="btcLow" class="value"></p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Atualizado a cada 3 segundos</small>
+          </div>
+        </div>
+      </div>
+      <div class="col description">
+        <div class="card h-100">
+          <img src="./img/ETH.SVG" class="card-img-top imgCoin" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title titleCoin">ETH : Ethereum</h5>
+            <div class="card-text">
+              <label for="ethBuy">Valor de compra:</label>
+              <p id="ethBuy" class="value"></p>
+              <label for="ethBuy">Valor de venda:</label>
+              <p id="ethSell" class="value"></p>
+              <label for="ethOpen">Abertura do Mercado</label>
+              <p id="ethOpen" class="value"></p>
+              <label for="btcHigh">Maior Preço</label>
+              <p id="ethHigh" class="value"></p>
+              <label for="ethLow">Menor Preço</label>
+              <p id="ethLow" class="value"></p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Atualizado a cada 3 segundos</small>
+          </div>
+        </div>
+      </div>
+      <div class="col description">
+        <div class="card h-100">
+          <img src="./img/AXS.SVG" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title titleCoin">AXS : Axis Infinity</h5>
+            <div class="card-text">
+              <label for="axsBuy">Valor de compra:</label>
+              <p id="axsBuy" class="value"></p>
+              <label for="axsBuy">Valor de venda:</label>
+              <p id="axsSell" class="value"></p>
+              <label for="axsOpen">Abertura do Mercado</label>
+              <p id="axsOpen" class="value"></p>
+              <label for="axsHigh">Maior Preço</label>
+              <p id="axsHigh" class="value"></p>
+              <label for="axsLow">Menor Preço</label>
+              <p id="axsLow" class="value"></p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Atualizado a cada 3 segundos</small>
+          </div>
+        </div>
       </div>
 
-      <!-- Valor de venda -->
-      <label for="high">Valor de venda</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input
-          type="text"
-          class="form-control"
-          id="sell"
-          placeholder="valor de venda atual"
-          readonly
-        />
-      </div>
-
-      <!-- Abertura -->
-
-      <label for="high">Abertura do Mercado</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input
-          type="text"
-          class="form-control"
-          id="open"
-          placeholder="valor da moeda na abertura do mercado"
-          readonly
-        />
-      </div>
-
-      <!-- Maior cotação -->
-
-      <label for="high">Maior cotação</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input
-          type="text"
-          class="form-control"
-          id="high"
-          placeholder="maior cotação do dia"
-          readonly
-        />
-      </div>
-
-      <!-- Menor cotação -->
-      <label for="high">Menor cotação</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input
-          type="text"
-          class="form-control"
-          id="low"
-          placeholder="menor cotação do dia"
-          readonly
-        />
-      </div>
-    </form>
+      
+    </div>
 
     <!-- Scripts -->
     <script
