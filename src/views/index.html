@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mercado Cripto</title>
+
+    <!-- Bootstap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../views/styles/style.css" />
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bodyColor">
+    <header class="nav-header">
+      <h1>Mercado Cripto</h1>
+    </header>
+
+    <div class="box">
+      <div class="selectCoin">
+        <select
+          class="form-select form-select-lg mb-3 shadow-sm"
+          aria-label=".form-select-lg example"
+          id="select-coin"
+        >
+          <option selected>Selecione uma criptomoeda</option>
+          <option value="btc">BTC : Bitcoin</option>
+          <option value="eth">ETH : Ethereum</option>
+          <option value="ada">ADA : Cardano</option>
+          <option value="xrp">XRP : XRP</option>
+
+          
+          
+        </select>
+      </div>
+
+      <!-- SPINNER -->
+      <h5 class="waitingCoin"id="waiting-coin">Selecione para carregar os dados...</h5>
+      <div class="d-flex justify-content-center spinnerCoin" id="spinner-coin">
+        <div class="spinner-border" role="status">
+          <!-- <span class="visually-hidden">Loading...</span> -->
+        </div>
+      </div>
+
+      <!-- CARD VISÃO GERAL -->
+
+      <div class="card text-center shadow-sm cardCoin visually-hidden" id="card-coin">
+        <div class="card-header">Visão Geral</div>
+        <div class="card-body">
+
+          <img src="" alt="" class="iconCoin" id="icon-coin">
+
+          <h5 class="card-title" id="name-coin"></h5>
+          <label for="coinOpen" class="description">Variação do Dia</label>
+          <p id="coin-porcent" class=""></p>
+
+          <label for="coinOpen" class="description">Valor de Abertura</label>
+          <p id="coinOpen"></p>
+
+          <label for="coinHigh" class="description">Maior preço</label>
+          <p id="coinHigh"></p>
+
+          <label for="coinLow" class="description">Menor preço</label>
+          <p id="coinLow"></p>
+          
+        </div>
+        <div class="card-footer text-muted">
+          Valores atualizados a cada 30 segundos
+        </div>
+      </div>
+
+      <!-- CARD COMPRA E VENDA -->
+
+      <div class="card text-center cardCoin visually-hidden " id="table-coin">
+        <div class="card-header">Negociação Atual</div>
+        <div class="card-body"></div>
+        <div class="tableCoin"> 
+          <table class="table table-light table-striped">
+            <tr>
+             <tr>
+              <th class="table-secondary">Venda</th>
+              <th class="table-secondary">Compra</th>
+             </tr>
+  
+             <tr>
+              <td class="table-light" id="coinSell">00000.00</td>
+              <td class="table-light" id="coinBuy">00000.00</td>
+             </tr>
+            </tr>
+          </table>
+        </div>
+        <div class="card-footer text-muted">
+          Valores atualizados a cada 30 segundos
+        </div>
+      </div>
+
+      <!-- Accordion de Dúvidas Frequentes -->
+      <div class="accordion accordion-flush accordionCoin" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              O que são criptomoedas?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Criptomoeda refere-se a qualquer forma de moeda que existe digital ou virtualmente e usa criptografia para garantir a realização de transações. As criptomoedas não têm uma autoridade central de emissão ou regulação.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              O que é blockchain?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Blockchain é uma base compartilhada de dados que faz o registro e validação de transações digitais, trocas de informações processadas por usuários de uma rede descentralizada de computadores.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Onde negociar?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">A compra e venda de criptomoedas é feita nas Corretoras de criptomoedas. Um investidor precisa de abrir uma conta de câmbio preenchendo um formulário on-line. A maioria das corretoras apresenta um Livro de ordens que indica quais os investidores que estão a comprar e a vender e onde o estão a fazer.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fim do Accordion -->
+    </div>
+    <!-- Fim do BOX -->
+    <!-- SCRIPTS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../controller/criptoController.js"></script>
+    <script src="../controller/actionsController.js"></script>
+  </body>
+</html>
