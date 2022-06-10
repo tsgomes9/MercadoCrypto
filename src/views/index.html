@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mercado Cripto</title>
-
-    <!-- Bootstap -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,149 +12,460 @@
       crossorigin="anonymous"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="../views/styles/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,800&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+
+    <title>Mercado Cripto</title>
   </head>
+  <body>
+    <!-- Barra de Navegação -->
 
-  <body class="bodyColor">
-    <header class="nav-header">
-      <h1>Mercado Cripto</h1>
-    </header>
+    <nav class="bg-light navBarCoin shadow-sm">
+      <div class="container">
+        <span class="navTitle">MERCADO CRYPTO</span>
+      </div>
+    </nav>
 
-    <div class="box">
-      <div class="selectCoin">
-        <select
-          class="form-select form-select-lg mb-3 shadow-sm"
-          aria-label=".form-select-lg example"
-          id="select-coin"
-        >
-          <option selected>Selecione uma criptomoeda</option>
-          <option value="btc">BTC : Bitcoin</option>
-          <option value="eth">ETH : Ethereum</option>
-          <option value="ada">ADA : Cardano</option>
-          <option value="xrp">XRP : XRP</option>
+    <!-- Container do site-->
+    <div class="titlePageDiv">
+      <h1 class="titlePage">Veja alguns dos melhores ativos</h1>
+    </div>
 
+    <div class="container">
+      <!-- Cards -->
+      <div class="row row-cols-lg-4 row-cols-sm-2">
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/btc-icon.svg"
+                alt="icone bitcoin"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Bitcoin</label>
+            <p class="subTitlecoin">BTC</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin0"></div>
+            <p id="btc-open" class="priceCoin"></p>
+            <p id="btc-status" class=""></p>
+          </div>
+          </a>
+        </div>
+
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            
+            <div>
+              <img
+                src="../views/img/litecoin-icon.svg"
+                alt="icone litecoin"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
           
-          
-        </select>
-      </div>
+            <label class="cardTitleCoin">Litecoin</label>
+            <p id="subTitlecoin" class="subTitlecoin">LTC</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin1"></div>
+            <p id="ltc-open" class="priceCoin"></p>
+            <p id="ltc-status" class=""></p>
+          </div>
+        </a>
+        </div>
 
-      <!-- SPINNER -->
-      <h5 class="waitingCoin"id="waiting-coin">Selecione para carregar os dados...</h5>
-      <div class="d-flex justify-content-center spinnerCoin" id="spinner-coin">
-        <div class="spinner-border" role="status">
-          <!-- <span class="visually-hidden">Loading...</span> -->
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/ethereum-icon.svg"
+                alt="icone ethereum"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Ethereum</label>
+            <p id="subTitlecoin" class="subTitlecoin">ETH</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin2"></div>
+            <p id="eth-open" class="priceCoin"></p>
+            <p id="eth-status" class=""></p>
+            
+          </div>
+        </a>
+        </div>
+
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/high-icon.svg"
+                alt="icone highstreet"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Highstreet</label>
+            <p id="subTitlecoin" class="subTitlecoin">HIGH</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin3"></div>
+            <p id="high-open" class="priceCoin"></p>
+            <p id="high-status" class=""></p>
+          </div>
+          </a>
+        </div>
+
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/axie-infinity-icon.svg"
+                alt="icone axie infinity"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Axie Infinity</label>
+            <p class="subTitlecoin">AXS</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin4"></div>
+            <p id="axs-open" class="priceCoin"></p>
+            <p id="axs-status" class=""></p>
+          </div>
+          </a>
+        </div>
+
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/algorand-icon.svg"
+                alt="icone algorand"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Algorand</label>
+            <p class="subTitlecoin">ALGO</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin5"></div>
+            <p id="algo-open" class="priceCoin"></p>
+            <p id="algo-status" class=""></p>
+          </div>
+          </a>
+        </div>
+
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/avalanche-icon.svg"
+                alt="icone avalanche"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Avalanche</label>
+            <p class="subTitlecoin">AVAX</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin6"></div>
+            <p id="avax-open" class="priceCoin"></p>
+            <p id="avax-status" class=""></p>
+          </div>
+          </a>
+        </div>
+
+        <div class="cardCoinGrid">
+          <a href="#histCardCoin">
+          <div class="shadow rounded cardCoin">
+            <!-- icon -->
+            <div>
+              <img
+                src="../views/img/cosmos-icon.svg"
+                alt="icone comos"
+                class="cardIconCoin"
+              />
+            </div>
+            <!-- end-icon -->
+            <label class="cardTitleCoin">Cosmos</label>
+            <p class="subTitlecoin">ATOM</p>
+            <p class="cotacaoCoin">Cotação:</p>
+            <div class="spinner-border spinner-border-sm" role="status" id="spinCoin7"></div>
+            <p id="atom-open" class="priceCoin"></p>
+            <p id="atom-status" class=""></p>
+          </div>
+          </a>
         </div>
       </div>
+    </div>
+    <!-- Fim do primeiro container-->
 
-      <!-- CARD VISÃO GERAL -->
-
-      <div class="card text-center shadow-sm cardCoin visually-hidden" id="card-coin">
-        <div class="card-header">Visão Geral</div>
-        <div class="card-body">
-
-          <img src="" alt="" class="iconCoin" id="icon-coin">
-
-          <h5 class="card-title" id="name-coin"></h5>
-          <label for="coinOpen" class="description">Variação do Dia</label>
-          <p id="coin-porcent" class=""></p>
-
-          <label for="coinOpen" class="description">Valor de Abertura</label>
-          <p id="coinOpen"></p>
-
-          <label for="coinHigh" class="description">Maior preço</label>
-          <p id="coinHigh"></p>
-
-          <label for="coinLow" class="description">Menor preço</label>
-          <p id="coinLow"></p>
-          
-        </div>
-        <div class="card-footer text-muted">
-          Valores atualizados a cada 30 segundos
+    
+    <div class="statusCoin" id="histCardCoin">
+      <!-- Select -->
+      <div class="container">
+        <h1 class="titlePage2">Últimas negociações em <span id="coinName"></span></h1>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <select
+            class="form-select form-select-lg mb-3 selectCoin shadow"
+            aria-label=".form-select-lg example"
+            id="select-coin"
+          >
+            <option selected value="btc">Bitcoin (BTC)</option>
+            <option value="ltc">Litecoin (LTC)</option>
+            <option value="eth">Ethereum (ETH)</option>
+            <option value="high">Highstreet (HIGH)</option>
+            <option value="axs">Axie Infinity (AXS)</option>
+            <option value="algo">Algorand (ALGO)</option>
+            <option value="avax">Avalanche (AVAX)</option>
+            <option value="atom">Cosmos (ATOM)</option>
+          </select>
         </div>
       </div>
-
-      <!-- CARD COMPRA E VENDA -->
-
-      <div class="card text-center cardCoin visually-hidden " id="table-coin">
-        <div class="card-header">Negociação Atual</div>
-        <div class="card-body"></div>
-        <div class="tableCoin"> 
-          <table class="table table-light table-striped">
-            <tr>
-             <tr>
-              <th class="table-secondary">Venda</th>
-              <th class="table-secondary">Compra</th>
-             </tr>
-  
-             <tr>
-              <td class="table-light" id="coinSell">00000.00</td>
-              <td class="table-light" id="coinBuy">00000.00</td>
-             </tr>
-            </tr>
-          </table>
-        </div>
-        <div class="card-footer text-muted">
-          Valores atualizados a cada 30 segundos
+      <!--select end-->
+      <div class="container">
+        <div class="dataCoin shadow rounded">
+          <div class="card-body container">
+            <div class="row row-cols-lg-4 row-cols-sm-1">
+              <div>
+                <label for="" class="priceTitle">ABERTURA</label>
+                <p class="priceTitle">R$ <span class="priceNumbers" id="open-coin"></span></p>
+              </div>
+              <div class="">
+                <label for="" class="priceTitle">MÁXIMA</label>
+                <p class="priceTitle">R$ <span class="priceNumbers" id="high-coin"></span></p>
+              </div>
+              <div class="">
+                <label for="" class="priceTitle">MÍNIMA</label>
+                <p class="priceTitle">R$ <span class="priceNumbers" id="low-coin"></span></p>
+              </div>
+              <div class="">
+                <label for="" class="priceTitle">AGORA</label>
+                <p class="priceTitle">R$ <span class="priceNumbers" id="buy-coin"></span></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!--container end-->
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="dataCoin col-lg-4 col-md-6 col-sm-12 ">
+          <div class="dataCoin shadow rounded">
+            <div>
+              <h1 class="titlePage2">Resumo dia anterior</h1>
 
-      <!-- Accordion de Dúvidas Frequentes -->
-      <div class="accordion accordion-flush accordionCoin" id="accordionFlushExample">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Data</th>
+                    <td id="data-coin"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Abertura</th>
+                    <td id="opening-coin"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fechamento</th>
+                    <td id="closing-coin"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Menor Valor</th>
+                    <td id="lowest-coin"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Maior Valor</th>
+                    <td id="highest-coin"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Volume</th>
+                    <td id="volume-coin"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Quantidade</th>
+                    <td id="quantity-coin"></td>
+                  </tr>
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="simulaCoinDiv col-lg-8 col-md-6 col-sm-12 rounded shadow">
+          <!-- <div class="simulaCoin shadow rounded"> -->
+            <h1 class="titlePage2">Histórico de negociações  <span id="coinName2"></span></h1>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Preço</th>
+                  <th scope="col">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row"id="th0-trade"></td>
+                  <td id="th0-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th1-trade"></td>
+                  <td id="th1-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th2-trade"></td>
+                  <td id="th2-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th3-trade"></td>
+                  <td id="th3-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th4-trade"></td>
+                  <td id="th4-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th5-trade"></td>
+                  <td id="th5-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th6-trade"></td>
+                  <td id="th6-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th7-trade"></td>
+                  <td id="th7-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th8-trade"></td>
+                  <td id="th8-type"></td>
+                  
+                </tr>
+                <tr>
+                  <td scope="row" id="th9-trade"></td>
+                  <td id="th9-type"></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Calculadora de conversão -->
+    <div class="calcConvCoin"> 
+<h1 class="titlePage3">Calculadora de conversão <span id="coin-name3"></span></h1>
+
+<!-- Select 2 -->
+<div>
+    <select
+    class="form-select form-select-lg mb-3 selectCoin2 shadow"
+    aria-label=".form-select-lg example"
+    id="select-coin2">
+      <option selected value="btc">Bitcoin (BTC)</option>
+      <option value="ltc">Litecoin (LTC)</option>
+      <option value="eth">Ethereum (ETH)</option>
+      <option value="high">Highstreet (HIGH)</option>
+      <option value="axs">Axie Infinity (AXS)</option>
+      <option value="algo">Algorand (ALGO)</option>
+      <option value="avax">Avalanche (AVAX)</option>
+      <option value="atom">Cosmos (ATOM)</option>
+    </select>
+</div>
+
+<div><input class="form-control calcNumber form-control-lg" type="text" placeholder="R$"  id="read-coin"> </div>
+<h1 class="titlePage4" id="result-convert-coin"></h1>
+<div class="titlePage4">
+  <button type="button" class="btn btn-outline-light btn-lg titlePage2 calcButtonCoin" id="button-convert-coin">Calcular</button>
+</div>
+
+    </div>
+
+    <section class="questionsSession"> <!--Dúvidas frequentes-->
+      <h1 class="titlePage5">Dúvidas frequentes</h1>
+      <div class="accordion accordion-flush container">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
+          <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
               O que são criptomoedas?
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Criptomoeda refere-se a qualquer forma de moeda que existe digital ou virtualmente e usa criptografia para garantir a realização de transações. As criptomoedas não têm uma autoridade central de emissão ou regulação.</div>
+            <div class="accordion-body">Uma criptomoeda ou cibermoeda é um meio de troca, podendo ser centralizado ou descentralizado que se utiliza da tecnologia de blockchain e da criptografia para assegurar a validade das transações e a criação de novas unidades da moeda. (Wikipédia)</div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              O que é blockchain?
+              Qual a vantagem de negociar criptomoedas?
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Blockchain é uma base compartilhada de dados que faz o registro e validação de transações digitais, trocas de informações processadas por usuários de uma rede descentralizada de computadores.</div>
+            <div class="accordion-body">• Serviço descentralizado.
+              • Usuário possui o controle de tudo.
+              • Rede segura.
+              • Não correm risco de inflação.
+              • Taxas pequenas ou inexistentes.</div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Onde negociar?
+              Com funciona a tecnologia blockchain?
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">A compra e venda de criptomoedas é feita nas Corretoras de criptomoedas. Um investidor precisa de abrir uma conta de câmbio preenchendo um formulário on-line. A maioria das corretoras apresenta um Livro de ordens que indica quais os investidores que estão a comprar e a vender e onde o estão a fazer.</div>
+            <div class="accordion-body"> O blockchain armazena periodicamente informações de transações em lotes, chamados blocos. Esses blocos recebem uma impressão digital chamada hash – um código matemático único – e são interligados em um conjunto em ordem cronológica, formando uma linha contínua de blocos – uma corrente (daí o termo “chain”). (Exame.com) </div>
           </div>
         </div>
       </div>
+    </section><!--Fim da sessão-->
 
-      <!-- Fim do Accordion -->
-    </div>
-    <!-- Fim do BOX -->
-    <!-- SCRIPTS -->
+    <section class="finalSession">
+      <div class="container">
+        <p class="titleCoin5">MERCADO CRYPTO </p>
+
+        <p class="signature">Criado por Thiago Gomes</p>
+      </div>
+    </section>
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+
     <script src="../controller/criptoController.js"></script>
-    <script src="../controller/actionsController.js"></script>
   </body>
 </html>

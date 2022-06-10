@@ -1,0 +1,221 @@
+.navBarCoin{
+  height: 4.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0
+}
+.navTitle{
+  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem
+  
+}
+
+.titlePage{
+  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  
+}
+
+.cardCoinGrid{
+  margin-bottom: 1.5rem;   
+}
+
+.cardCoin{
+  padding: .8rem .8rem .2rem 1rem;
+}
+
+.cardIconCoin{
+  height: 2rem;
+  margin-bottom: .8rem
+}
+
+.cardTitleCoin{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700
+}
+
+.subTitlecoin{
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  margin-bottom: 2rem;
+}
+
+.cotacaoCoin{
+  /* position: relative; */
+  /* float: left; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  /* margin-bottom: 0.5rem */
+}
+
+.priceCoin{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem
+}
+
+.selectCoin{
+  height: 4rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  /* margin: auto; */  
+}
+
+.selectCoin2{
+  height: 4rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  margin: auto;   
+  width: 20rem
+}
+
+.titlePage2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.priceTitle{
+  font-family: 'Open Sans', sans-serif;
+  font-size: .8rem;
+  
+}
+
+.priceNumbers{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800
+}
+
+.statusCoin{
+  background-color: rgb(240, 240, 240);
+  padding: 5rem 0 5rem 0;
+  /* margin: 1rem  */
+}
+
+.dataCoin{
+  background-color: white;
+  padding: 1rem
+}
+
+.simulaCoinDiv{
+  margin-top: 1rem;
+  /* margin-bottom: .5rem */
+  padding: 1.5rem
+}
+
+.buyTrade{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: .9rem;
+  color: rgb(0, 192, 0)
+}
+
+.sellTrade{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: .9rem;
+  color: rgb(192, 0, 0)
+}
+
+a:link, a:visited, a:hover{
+  text-decoration: none;
+  color: black
+}
+
+.calcConvCoin{
+  background-color: rgb(30, 30, 36);
+  margin-top: 2rem;
+  padding: 5rem 6rem 2.5rem 4rem;
+}
+
+.titlePage3{  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem
+}
+
+.titlePage4{  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 1rem
+}
+
+.calcNumber{
+  height: 4rem;
+  width: 20rem;
+  margin: auto;
+}
+
+.calcButtonCoin{
+  width: 20rem;
+  
+}
+
+.greenStatus{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+  color: rgb(0, 192, 0)
+}
+
+.redStatus{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+  color: rgb(192, 0, 0)
+}
+
+.titlePage5{  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  margin-top: 3rem;
+  margin-bottom: 1rem
+  
+}
+
+.questionsSession{
+  /* margin: auto; */
+  margin-bottom: 5rem
+}
+
+.finalSession{
+  padding: 5rem;
+  background-color: rgb(30, 30, 36);
+}
+
+.titleCoin5{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center
+}
+
+.signature{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  color: white
+}
